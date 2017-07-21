@@ -8,7 +8,7 @@ for(i = 0; i <= num; i++){
     if(tell <= 2){
         console.log("The number is prime");
     }else{
-        cosole.log("the number is not prime ");
+        console.log("the number is not prime ");
     }
 
 

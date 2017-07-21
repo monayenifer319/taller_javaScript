@@ -13,7 +13,7 @@ console.log("height is: " + height);
 if(live === "si"){
     console.log("true");
 }else{
-    console.log("else");
+    console.log("false");
 }
 
 
