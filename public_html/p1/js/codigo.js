@@ -1,1 +1,1 @@
-console.log("Hola, este es mi primer script en JavaScript");
+console.log("hello, This is my first JavaScript script");

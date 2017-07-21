@@ -1,4 +1,4 @@
-var message =("Hola, este es mi primer script en JavaScript almacenado en una variable.");
+var message =("Hello, This is my first JavaScript script stored in a variable.");
 console.log(message);
 
 
