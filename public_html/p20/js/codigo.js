@@ -16,13 +16,22 @@ if((salary <= salaryMin) && (dayjob <= 30)){
     console.log("Total payment: "+ totalpay);
 }if((salary >= salaryMax) && (dayjob <= 30)){
     console.log("According to the salary entered, the transpott aid is not entitled and will be retained source");
-    var reten = Number(prompt("Please enter The value of the source retreat"));
-    var paymeday =  valday * dayjob;
-    var totalpay2 = paymeday - reten;
-    console.log("Transport aid: "+ 0);
-    console.log("Source retention: "+ reten);
-    console.log("worked days: "+ dayjob + " = "+ paymeday );
-    console.log("Total payment: "+ totalpay2);
+    var reten = Number(prompt("Please enter retention percentage"));
+    var retention = salary * (reten/100);
+    paymeday =  valday * dayjob;
+    var totalpay2 = paymeday - retention;
+    if(retention >= totalpay2){
+        console.log("Transport aid: "+ 0);
+        console.log("Source retention: "+ 0);
+        console.log("worked days: "+ dayjob + " = "+ paymeday );
+        console.log("Total payment: "+ paymeday);
+    }else{
+        console.log("Transport aid: "+ 0);
+        console.log("Source retention: "+ retention);
+        console.log("worked days: "+ dayjob + " = "+ paymeday );
+        console.log("Total payment: "+ totalpay2);
+    }
+    
 }if((salary > salaryMin) && (dayjob <= 30) && (salary < salaryMax)){
     console.log("According to the salary entered, does not have the right to transport and will not be held at source");
     var paymeday =  valday * dayjob;
