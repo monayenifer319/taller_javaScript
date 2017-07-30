@@ -1,14 +1,11 @@
 //while(option =! 0){
  console.log("Select an option");
-     var option = prompt("1. To make a sum"); 
-          var num1 = prompt("enter a number");
-          var num2 = prompt("Enter another number");
-          var sum = num1 + num2;
-          console.log("the sum is: "+sum);
-     prompt("2. make a subtraction");
-      prompt("3. Make a subtraction");
-     option = prompt("4. Make a division");
-     option = prompt("0. exit the program");    
+ console.log("1. To make a sum"); 
+ console.log("2. make a subtraction");
+ console.log("3. Make a subtraction");
+ console.log("4. Make a division");
+ console.log("0. exit the program"); 
+ 
     
     switch(option){
         case 1:
