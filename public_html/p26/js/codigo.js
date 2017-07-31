@@ -1,7 +1,7 @@
 do{
     var num1 = Number(prompt("enter a number"));
     var num2 = Number(prompt("Enter another number"));
-    var op = prompt("menu: 1. To make a sum, 2.make a subtraction, 3.Make a subtraction, 0.exit the program, 4. Make a division");
+    var op = prompt("menu:\n 1. To make a sum\n 2.make a subtraction,\n 3.Make a subtraction\n 4. Make a division\n 0.exit the program");
     var answer = 0;
     if(op == 1){
        answer = num1 + num2; 
@@ -14,6 +14,6 @@ do{
             console.log("the multiplication is: "+answer);
     }else if(op == 4){
             answer = num1/num2;
-            console.log("the multiplication is: "+answer);
+            console.log("the division is: "+answer);
     }
 }while(op !=0);
