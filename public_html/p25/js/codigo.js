@@ -1,5 +1,5 @@
-//var numbers = [];
-var numbers = new Array(10);
+var numbers = [];
+//var numbers = new Array(10);
 for (i=0; i <3; i++){ 
         numbers[i] = Number(prompt("Enter 10 numbers"));
         if(numbers[i] % 2 === 0){
@@ -7,6 +7,7 @@ for (i=0; i <3; i++){
         //if(nums % i === 0){
         }else{
              console.log("Prime numbers are");
+             
         }       
        	//console.log("number " + numbers[i] + " en la Posición " + i );          
 }
