@@ -1,9 +1,9 @@
-var tell, i;
-tel = 0;
+var voidi = "";
 var aste = "*";
-do{ 
-    i= 0;
-    console.log(aste);
-    tell ++;
- }while (i === 6);
+var i = 0;
+do{  
+    voidi = voidi + aste;
+    console.log(voidi);
+    i++;
+ }while (i <= 6);
 
