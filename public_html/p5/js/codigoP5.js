@@ -4,4 +4,3 @@ var Nid = prompt("Enter the ID number");
 
 console.log("hello, my name is " + name);
 console.log("my number " + typeid + " is " + Nid);
-

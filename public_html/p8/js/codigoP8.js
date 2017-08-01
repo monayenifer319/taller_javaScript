@@ -9,4 +9,3 @@ console.log(num1 + " * " + num2 + " = " + multiplic);
 console.log(num1 + " / " + num2 +" = "+  div);
 console.log(num1+ " - " + num2 + " = " + difer);
 console.log(num1+ " + " + num2 + " = " + add);
-

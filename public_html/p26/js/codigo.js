@@ -23,20 +23,23 @@ function division(){
     divi = num1/num2;
     console.log("the division is: "+divi);
 }
-switch(option){
-    case 1:
-        add();
-    break;
-    case 2:
-        diferencia();
-    break;
-    case 3:
-        multipli();
-    break;
-    case 4:
-        division();
-    break;
-    case 0:
-        console.log("adios");
-    break;
-}
+//while(option !== 0){
+    switch(option){
+        case 1:
+            add();
+        break;
+        case 2:
+            diferencia();
+        break;
+        case 3:
+            multipli();
+        break;
+        case 4:
+            division();
+        break;
+        case 0:
+            console.log("adios");
+        break;
+    }
+       // console.log("The option is not valid");
+//}
