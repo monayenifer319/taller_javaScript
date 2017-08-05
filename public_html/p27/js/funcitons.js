@@ -14,7 +14,7 @@ function personal() {
     return regperso;
 }
 
-function family() {
+function family(){
     var regfamily = {
         name: " ",
         lastname: " ",
@@ -86,7 +86,6 @@ function print(regperso, regfamily, regjob, regprofile) {
     console.log("years of work experience: " + regprofile.experience);
 }
 
-//var prue;
 function menu() {
     var op = parseInt(prompt("Menu:\n 1. Personal information\n 2. Family Reference\n 3. Reference job\n 4. professional profile\n 5. Print resume\n 0. Exit the program"));
     return op;

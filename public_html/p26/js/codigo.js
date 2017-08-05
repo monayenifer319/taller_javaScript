@@ -37,9 +37,6 @@ function division(){
         case 4:
             division();
         break;
-        case 0:
-            console.log("adios");
-        break;
     }
        // console.log("The option is not valid");
 //}
