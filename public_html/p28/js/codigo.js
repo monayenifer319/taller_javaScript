@@ -17,9 +17,10 @@ function sequential(array) {
   for (var i = 0; i < max; i++) {
     if (array[i] === num) {
       console.log("the number " + num + " fue encontrado en la possition " + i);
-    }
-    else if (i === ()){
+      break;
+    } else if (i === (max - 1)) {
       console.log("the number " + num + " do no ");
+      break;
     }
   }
 }
