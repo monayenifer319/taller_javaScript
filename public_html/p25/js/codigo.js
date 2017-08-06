@@ -13,7 +13,6 @@ var tellpair = 0;
 for (i = 0; i < 6; i++) {
   numbers[i] = Number(prompt("Enter ten numbers:"));
   //console.log(numbers[i]);
-
 }
 console.log("even numbers are:");
 i = 0;
