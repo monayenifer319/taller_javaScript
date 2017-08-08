@@ -86,6 +86,9 @@ function selection(array) {
   }
   console.log(array);
 }
+function Print(orderSeque, orderBub, orderBidi, orderInser, orderSele) {
+  console.log(array);
+}
 while (op !== 0) {
   var op = menu();
   switch (op) {
@@ -94,25 +97,25 @@ while (op !== 0) {
       array = Fill();
       break;
     case 2:
-      sequential(array);
+      orderSeque = sequential(array);
       break;
     case 3:
-      bubble(array);
+      orderBub = bubble(array);
       break;
     case 4:
-      bidirectional(array);
+      orderBidi = bidirectional(array);
       break;
     case 5:
-      insertion(array);
+      orderInser = insertion(array);
       break;
     case 6:
       mixing(array);
       break;
     case 7:
-      selection(array);
+      orderSele = selection(array);
       break;
     case 8:
-      Print();
+      Print(orderSeque, orderBub, orderBidi, orderInser, orderSele);
       break;
     case 0 :
       op = 0;
