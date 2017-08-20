@@ -6,8 +6,7 @@ function menu() {
 function add() {
   var array = JSON.parse(localStorage.getItem('array'));
   do {
-    var contador = 0;
-
+    var tell = 0;
     var name = prompt("Enter the name of product?");
     var code = prompt("Enter the code of product?");
     var price = prompt("Enter the price of product?");

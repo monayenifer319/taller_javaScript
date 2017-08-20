@@ -10,7 +10,7 @@ var tellprimed = 0;
 var tellprime = 0;
 var tellpair = 0;
 // llenar el arreglo
-for (i = 0; i < 6; i++) {
+for (i = 0; i < 10; i++) {
   numbers[i] = Number(prompt("Enter ten numbers:"));
   //console.log(numbers[i]);
 }

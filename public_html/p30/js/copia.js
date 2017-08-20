@@ -9,7 +9,9 @@
 do {
 
 }
-} while (op1 > 4);
+}
+while (op1 > 4)
+  ;
 
 //function Language() {
 //  var lang = Number(prompt("Language setting\n 1. spanish\ 2. English"));
@@ -95,37 +97,37 @@ function Employemanag() {
     switch (op) {
       case 1:
         while (flag !== 0) {
-          regemploye.name = prompt("Enter the employee of name");
-          regemploye.lastname = prompt("enter the lastname");
-          regemploye.id = prompt("Enter the identification number");
-          var position = prompt("Enter the position");
-          var salary = Number(prompt("enter salary"));
-          var flag = Number(prompt("Want to add more employees?\nEnter 1 if your answer is yes, otherwise enter 0"));
+//          regemploye.name = prompt("Enter the employee of name");
+//          regemploye.lastname = prompt("enter the lastname");
+//          regemploye.id = prompt("Enter the identification number");
+//          var position = prompt("Enter the position");
+//          var salary = Number(prompt("enter salary"));
+//          var flag = Number(prompt("Want to add more employees?\nEnter 1 if your answer is yes, otherwise enter 0"));
           i = x;
           i++;
         }
         break;
       case 2:
-        console.log("           numero de empleados");
-        console.log(" |----------------------------------------------------------------------------|");
-        console.log(" |posicion |   nombre  |  apellido  |   documento    |   cargo    |  salario  |");
-        console.log(" |----------------------------------------------------------------------------|");
-        for (var i = 0; i <= x; i++) {
-          console.log(" |   " + i);
-          console.log("     |" + employee[i].name);
-          console.log("     |" + employee[i].lastname);
-          console.log("     |" + employee[i].id);
-          console.log("     |" + employee[i].position);
-          console.log("     |" + employee[i].salary);
-          console.log(" |-----------------------------------------------------------------------------|");
-        }
-        break;
-      case 3:
-        break;
-      case 4:
-        break;
-      case 0:
-        break;
+//        console.log("           numero de empleados");
+//        console.log(" |----------------------------------------------------------------------------|");
+//        console.log(" |posicion |   nombre  |  apellido  |   documento    |   cargo    |  salario  |");
+//        console.log(" |----------------------------------------------------------------------------|");
+//        for (var i = 0; i <= x; i++) {
+//          console.log(" |   " + i);
+//          console.log("     |" + employee[i].name);
+//          console.log("     |" + employee[i].lastname);
+//          console.log("     |" + employee[i].id);
+//          console.log("     |" + employee[i].position);
+//          console.log("     |" + employee[i].salary);
+//          console.log(" |-----------------------------------------------------------------------------|");
+    }
+    break;
+            case 3:
+            break;
+            case 4:
+            break;
+            case 0:
+            break;
     }
   }
   return employee;
