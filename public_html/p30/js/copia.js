@@ -1,3 +1,45 @@
+//do {
+//    var name = prompt("Enter the employee of name");
+//    var lastname = prompt("enter the lastname");
+//    var id = prompt("Enter the identification number");
+//    for (var i = 0; array.length; i++) {
+//      if (id === array[i].id) {
+//        alert("the id ya existe, digite nuevamente");
+//        var id = prompt("Enter the identification number");
+} else {
+//        var position = prompt("Enter the position");
+//        var salary = Number(prompt("enter salary"));
+//        if (salary < config.salary) {
+//          alert("error");
+//          var salary = Number(prompt("enter salary"));
+//        } else {
+//          regemploye = {
+//            name,
+//            lastname,
+//            id,
+//            position,
+//            salary
+//          };
+//          if (array === null) {
+//            array = new Array();
+//            array.push(regemploye);
+//            localStorage.setItem("arrayEm", JSON.stringify(array));
+//          } else {
+//            array.push(regemploye);
+//            localStorage.setItem("arrayEm", JSON.stringify(array));
+//          }
+//          var tem = confirm("Do you want to add another person?");
+//          if (tem) {
+//            var flag = 0;
+//          } else {
+//            flag = 1;
+//          }
+
+}
+}
+}
+//  } while (flag === 0);
+
 
 
 //function menu() {
@@ -11,8 +53,7 @@ do {
 }
 }
 while (op1 > 4)
-  ;
-
+        ;
 //function Language() {
 //  var lang = Number(prompt("Language setting\n 1. spanish\ 2. English"));
 //  return lang;
@@ -80,34 +121,34 @@ while (op1 > 4)
 //  return regdataset;
 //}
 
-var regemploye = {
-  name: "",
-  lastname: "",
-  id: "",
-  position: "",
-  salary: ""
-          //employee = []
-};
+        var regemploye = {
+        name: "",
+                lastname: "",
+                id: "",
+                position: "",
+                salary: ""
+                //employee = []
+                };
 //regemploye.employee = [];
-function Employemanag() {
-  var flag = 1;
-  var x = 0;
-  var op = Number(prompt("select a option\n 1. add\n 2. visualize\n 3.modify\n 4. delete\n0. return"));
-  while (op !== 0) {
-    switch (op) {
-      case 1:
-        while (flag !== 0) {
+        function Employemanag() {
+        var flag = 1;
+                var x = 0;
+                var op = Number(prompt("select a option\n 1. add\n 2. visualize\n 3.modify\n 4. delete\n0. return"));
+                while (op !== 0) {
+        switch (op) {
+        case 1:
+                while (flag !== 0) {
 //          regemploye.name = prompt("Enter the employee of name");
 //          regemploye.lastname = prompt("enter the lastname");
 //          regemploye.id = prompt("Enter the identification number");
 //          var position = prompt("Enter the position");
 //          var salary = Number(prompt("enter salary"));
 //          var flag = Number(prompt("Want to add more employees?\nEnter 1 if your answer is yes, otherwise enter 0"));
-          i = x;
-          i++;
+        i = x;
+                i++;
         }
         break;
-      case 2:
+                case 2:
 //        console.log("           numero de empleados");
 //        console.log(" |----------------------------------------------------------------------------|");
 //        console.log(" |posicion |   nombre  |  apellido  |   documento    |   cargo    |  salario  |");
@@ -120,18 +161,18 @@ function Employemanag() {
 //          console.log("     |" + employee[i].position);
 //          console.log("     |" + employee[i].salary);
 //          console.log(" |-----------------------------------------------------------------------------|");
-    }
-    break;
-            case 3:
-            break;
-            case 4:
-            break;
-            case 0:
-            break;
-    }
-  }
-  return employee;
-}
+        }
+        break;
+                case 3:
+                break;
+                case 4:
+                break;
+                case 0:
+                break;
+        }
+        }
+return employee;
+        }
 //function continu() {
 //  var op = Number(prompt("selecct an option\n 1. Employee management\n 2. Record hours worked\n 3. Manage payroll\n 4. Print payment vouchers\n0. exit the program "));
 //  while (op !== 0) {
