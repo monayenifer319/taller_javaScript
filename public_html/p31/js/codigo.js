@@ -47,3 +47,4 @@ console.log(arrangement.pair);
 
 arrangement.sumPair = arrangement.pair;
 
+

@@ -357,6 +357,7 @@ function hoursworked() {
         hDayTime,
         hNightOve,
         hExtDay,
+        hExtNight,
         hNighValue,
         hTimeValue,
         hSunNigValue,
@@ -370,11 +371,11 @@ function hoursworked() {
       if (arrayHou === null) {
         arrayHou = new Array();
         arrayHou.push(regHours);
-        localStorage.setItem("arrayHours", JSON(arrayHou));
+        localStorage.setItem("arrayHours", JSON.stringify(arrayHou));
         var tem = confirm("Want to manage another employee's hours?");
       } else {
         arrayHou.push(regHours);
-        localStorage.setItem("arrayHours", JSON(arrayHou));
+        localStorage.setItem("arrayHours", JSON.stringify(arrayHou));
         var tem = confirm("Want to manage another employee's hours?");
       }
     }
@@ -386,14 +387,14 @@ function hoursworked() {
   } while (flag !== 0);
 }
 
-function ManagePayroll(reghours) {
+function ManagePayroll() {
   var array = JSON.parse(localStorage.getItem("arrayEm"));
   var config = JSON.parse(localStorage.getItem("config"));
   var arrayHou = JSON.parse(localStorage.getItem("arrayHours"));
   console.log("             Roster ");
-  console.log(" |-----------------------------------------|");
-  console.log(" |   id      |" + "  position  |" + " total a pagar  |");
-  console.log(" |-----------------------------------------|");
+  console.log(" |--------------------------------------------------|");
+  console.log(" |   id    |" + " position|" + " Additional hours |" + "total a pagar|");
+  console.log(" |--------------------------------------------------|");
   for (var H = 0; H < arrayHou.length; H++) {
     for (var i = 0; i < array.length; i++) {
       if (arrayHou[H].search === array[i].id) {
@@ -412,23 +413,78 @@ function ManagePayroll(reghours) {
         arrayHou[H].hExDayVal = (arrayHou[H].hourValue * 1.100) * arrayHou[H].hExtDay;
 //hExNigVal: el valor total de las horas dominicales extra nocturnas (150%)
         arrayHou[H].hExNigVal = (arrayHou[H].hourValue * 1.150) * arrayHou[H].hExtNight;
+        //total de las horas normales
         arrayHou[H].hTimeVal = arrayHou[H].hourValue * arrayHou[H].hourTime;
-// valor total de todas las horas laboradas (saldo a pagar)
+// valor total de todas las horas laboradas (saldo a pagar de horas)
         arrayHou[H].hsWorVal = arrayHou[H].hNighValue + arrayHou[H].hTimeValue + arrayHou[H].hSunNigValue + arrayHou[H].hDayTimValue + arrayHou[H].hNightOveVal + arrayHou[H].hExDayVal + arrayHou[H].hExNigVal + arrayHou[H].hTimeVal;
-        if (array[i].salary <= config.salar * config.salaTransp) {
-          arrayHou[H].hsWorVal = arrayHou[H].hsWorVal + config.tranaid;
+        var pay = arrayHou[H].hsWorVal + array[i].salary;  //total pago
+        if (array[i].salary <= config.salary * config.salaTransp) {
+          pay = pay + config.tranaid;
+        } else if (array[i].salary >= config.salary * config.raten) {
+          var ratention = (config.porRatent / 100) * array[i].salary;
+          pay = (arrayHou[H].hsWorVal + array[i].salary) - ratention;
+        } else if (array[i].salary === config.salary) {
+          var foodaid = array[i].salary * 0.20;
+          pay = array[i].salary + foodaid;
         }
-//        if (array[i].salary === config.salary) {
-//          array[i].salary
-//        }
         localStorage.setItem("arrayEm", JSON.stringify(array));
-        console.log(" | " + array[i].id + "| " + array[i].position + "  | " + arrayHou[H].hsWorVal + "                |");
-        console.log(" |-----------------------------------------|");
+        console.log(" | " + array[i].id + "| " + array[i].position + " | " + arrayHou[H].hsWorVal + "                |" + pay + " |");
+        console.log(" |-----------------------------------------------|");
       }
     }
   }
+
 }
 
 function PrintpPayment() {
-
+  var array = JSON.parse(localStorage.getItem("arrayEm"));
+  var config = JSON.parse(localStorage.getItem("config"));
+  var arrayHou = JSON.parse(localStorage.getItem("arrayHours"));
+  var id = prompt("Enter the identification number of the employee");
+  var tell = 0;
+  for (var i = 0; i < array.length; i++) {
+    if (id === array[i].id) {
+      tell = 1;
+      var index = i;
+    }
+  }
+  if (tell !== 0) {
+    if (array[index].salary <= config.salary * config.salaTransp) {
+//var aid = config.salaTransp;
+      var pay = array[i].salary + config.salaTransp;
+      console.log("|----------------------------------------------------|");
+      console.log("|               proof of payment                     |");
+      console.log("|----------------------------------------------------|");
+      console.log("| " + array[i].name + "  " + array[i].lastname + "  " + array[i].id + "           |");
+      console.log("           increments                                   |");
+      console.log("|posotion  " + array[i].position + "                           |");
+      console.log("|base salary  Additional hours   transport                     |");
+      console.log("|" + array[i].salary + " " + config.salaTransp + "                     |");
+      console.log("|          decrements                                       |");
+      console.log("| ratemtion " + ratention + "                               |");
+      console.log("|   total payment    " + pay + "                            |");
+      //console.log("| ")
+      console.log("|                                  " + config.name + "    |");
+      console.log("|--------------------------------------------------|");
+    } else if (array[index].salary >= config.salary * config.raten) {
+      var ratention = (config.porRatent / 100) * array[index].salary;
+      var pay = array[index].salary - ratention;
+      console.log("|------------------------------------------------|");
+      console.log("|               proof of payment                 |");
+      console.log("|------------------------------------------------|");
+      console.log("| " + array[index].name + "   " + array[index].lastname + "   " + array[index].id + "                     |");
+      console.log("| posotion  " + array[index].position + "                                 |");
+      console.log("| base salary  Additional hours                  |");
+      console.log("| " + array[index].salary + "                                        |");
+      console.log("| ratemtion " + ratention + "                               |");
+      console.log("| total payment    " + pay + "                       |");
+      //console.log("| ")
+      console.log("|                                     " + config.name + "  |");
+      console.log("|------------------------------------------------|");
+      //var id = prompt("Enter the identification number of the employee");
+    }
+  }
+  if (tell === 0) {
+    alert("error, The employee does not exist in the database");
+  }
 }
