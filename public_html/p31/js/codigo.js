@@ -5,6 +5,7 @@ class array {
     this._primes;// = [];
     this._pair; //= [];
     this._sumPair;
+    this._averagePair;
     //this.numbers = Number(numbers);
   }
   set array(array) {
@@ -22,19 +23,30 @@ class array {
     return this._pair;
   }
   set sumPair(pair) {
-    for (var i = 0; i < this._pair.length; i++) {
-      this.sumPair = this.sumPair + this, _pair[i];
-    }
+    var tell = 0;
+    this._pair.forEach((e) => {
+      tell = tell + e;
+    });
+    this._sumPair = tell;
   }
   get sumPair() {
     return this._sumPair;
+  }
+  set averagePair(sumPair) {
+    this._averagePair = this._sumPair / this._pair.length;
+  }
+  get averagePair() {
+
+    return this._averagePair;
+  }
+  set primes(array) {
+
   }
 }
 var size = Number(prompt("What size do you want the arrangement"));
 var numbers = [];
 for (i = 0; i < size; i++) {
-  numbers[i] = prompt("Enter ten numbers:");
-  //console.log(numbers[i]);
+  numbers[i] = Number(prompt("Enter ten numbers:"));
 }
 var arrangement = new array();
 arrangement.array = numbers;
@@ -46,5 +58,10 @@ console.log("even numbers are:");
 console.log(arrangement.pair);
 
 arrangement.sumPair = arrangement.pair;
+console.log("the sum pair is: ");
+console.log(arrangement.sumPair);
 
+arrangement.averagePair = arrangement.sumPair;
+console.log("the average the of pair is: ");
+console.log(arrangement.averagePair);
 

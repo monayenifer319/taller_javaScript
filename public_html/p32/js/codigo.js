@@ -1,36 +1,72 @@
-numbers = [];
-primes = [];
-pair = [];
-class array {
-  constructor(numbers) {
-    this._numbers = Number(numbers);
+class operation {
+  constructor() {
+    this._array;
+    this._add;
+    this._diferencia;
+    this._multipli;
+    this._division;
   }
-  setnumbers(numers) {
-    this._numbers = numbers;
+  set add(array) {
+    this._add = array[0] + array[1];
   }
-  getnumbers(numbers) {
-    return this._numbers;
+  get add() {
+    return this._add;
   }
-
-  numPair() {
-    tellpair = 0;
-    i = 0;
-    while (i <= 9) {
-      if ((numbers[i] % 2) === 0) {
-        pair[tellpair] = numbers[i];
-        sumpair = sumpair + pair[tellpair];
-        tellpair++;
-        Ppair = sumpair / tellpair;
-      }
-      i++;
-    }
-    return this
+  set diferencia(array) {
+    this._diferencia = array[0] - array[1];
+  }
+  get diferencia() {
+    return this._diferencia;
+  }
+  set  multipli(array) {
+    this._multipli = array[0] * array[1];
+  }
+  get multipli() {
+    return  this._multipli;
+  }
+  set division(array) {
+    this._division = array[0] * array[1];
+  }
+  get division() {
+    return  this._division;
   }
 }
-
-for (i = 0; i < 10; i++) {
-  numbers[i] = prompt("Enter ten numbers:");
-  //console.log(numbers[i]);
+function num() {
+  var num1 = Number(prompt("enter a number"));
+  var num2 = Number(prompt("Enter another number"));
+  var num = [num1, num2];
+  return num;
 }
-console.log("even numbers are:");
-console.log(pair[tellpair]);
+var clas = new operation();
+//var num = [];
+do {
+  var option = Number(prompt("menu:\n 1. To make a sum\n 2.make a subtraction,\n 3.Make a multiplication\n 4. Make a division\n 0.exit the program"));
+  switch (option) {
+    case 1:
+      clas.array = num();
+      clas.add = clas.array;
+      console.log("the sum is: " + clas.add);
+      break;
+    case 2:
+      clas.array = num();
+      clas.diferencia = clas.array;
+      console.log("the diferencia is: " + clas.diferencia);
+      break;
+    case 3:
+      clas.array = num();
+      clas.multipli = clas.array;
+      console.log("the multiplication is: " + clas.multipli);
+      break;
+    case 4:
+      clas.array = num();
+      clas.division = clas.array;
+      console.log("the division is: " + clas.division);
+      break;
+    case 0:
+      option = 0;
+      break;
+    default:
+      alert("he option is not valid, enter a number from 0 to 4");
+      break;
+  }
+} while (option !== 0);

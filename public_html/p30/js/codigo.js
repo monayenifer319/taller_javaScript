@@ -486,5 +486,6 @@ function PrintpPayment() {
   }
   if (tell === 0) {
     alert("error, The employee does not exist in the database");
+    var id = prompt("Enter the identification number of the employee");
   }
 }
