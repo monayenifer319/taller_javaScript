@@ -1,36 +1,19 @@
-numbers = [];
-primes = [];
-pair = [];
-class array {
-  constructor(numbers) {
-    this._numbers = Number(numbers);
-  }
-  setnumbers(numers) {
-    this._numbers = numbers;
-  }
-  getnumbers(numbers) {
-    return this._numbers;
-  }
+class spanish {
 
-  numPair() {
-    tellpair = 0;
-    i = 0;
-    while (i <= 9) {
-      if ((numbers[i] % 2) === 0) {
-        pair[tellpair] = numbers[i];
-        sumpair = sumpair + pair[tellpair];
-        tellpair++;
-        Ppair = sumpair / tellpair;
-      }
-      i++;
-    }
-    return this
+}
+class english {
+}
+do {
+  var lang = Number(prompt("Language setting\n 1. spanish\n 2. English. \n 0 exit"));
+  switch (lang) {
+    case 1:
+      var span = new spanish;
+      break;
+    case 2:
+      var engli = new english;
+      break;
+    default:
+      alert("You must select a language");
+      break;
   }
-}
-
-for (i = 0; i < 10; i++) {
-  numbers[i] = prompt("Enter ten numbers:");
-  //console.log(numbers[i]);
-}
-console.log("even numbers are:");
-console.log(pair[tellpair]);
+} while (lang !== 0);

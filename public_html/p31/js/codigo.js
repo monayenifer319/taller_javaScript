@@ -1,12 +1,12 @@
-//var hola = prompt("olaaa");
 class array {
   constructor() {
     this._array;
-    this._primes;// = [];
-    this._pair; //= [];
+    this._primes;
+    this._pair;
     this._sumPair;
     this._averagePair;
-    //this.numbers = Number(numbers);
+    this._sumPrime;
+    this._averagePrime;
   }
   set array(array) {
     this._array = array;
@@ -41,6 +41,34 @@ class array {
   }
   set primes(array) {
 
+    for (var i = 0; i < this._array.length; i++) {
+      var tell = 0;
+      for (var j = 0; i <= this._array[i]; j++) {
+        if (this._array[i] % j === 0) {
+          tell++;
+        }
+      }
+      if (tell <= 2) {
+        this._primes.push(this._array[i]);
+      }
+    }
+  }
+  get primes() {
+    return this._primes;
+  }
+  set sumPrime(prime) {
+    for (var i = 0; i < this._prime.length; i++) {
+      this._sumPime = prime[i] + this._sumPrime;
+    }
+  }
+  get sumPrime() {
+    return this._sumPrime;
+  }
+  set averagePrime() {
+    this._averagePrime = this._sumPrime / this._prime.length;
+  }
+  get averagePrime() {
+    return this._averagePrime;
   }
 }
 var size = Number(prompt("What size do you want the arrangement"));
@@ -65,3 +93,14 @@ arrangement.averagePair = arrangement.sumPair;
 console.log("the average the of pair is: ");
 console.log(arrangement.averagePair);
 
+arrangement.prime = arrangement.array;
+console.log("the primes is: ");
+console.log(arrangement.prime);
+
+arrangement.sumPrime = arrangement.prime;
+console.log("the sum the of primes is: ");
+console.log(arrangement.sumPrime);
+
+arrangement.averagePrime = arrangement.sumPrime;
+console.log("the average average the of primes is: ");
+console.log(arrangement.averagePrime);
