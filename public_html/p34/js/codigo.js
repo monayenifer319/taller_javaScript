@@ -39,10 +39,9 @@ class methods {
         }
       }
     }
-    console.log(array);
-    //this._bubble = array;
+    this._bubble = this._array;
   }
-  get bibble() {
+  get bubble() {
     return this._bubble;
   }
   set bidirectional(array) {
@@ -62,7 +61,7 @@ class methods {
         }
       }
     }
-    console.log(array);
+    //console.log(array);
   }
   get bidirectional() {
     return this._bidirectional;
@@ -77,13 +76,14 @@ class methods {
       }
       array[tell + 1] = tem;
     }
-    console.log(array);
+    //console.log(array);
   }
   get insertion() {
     return this._insertion;
 
   }
   set Selection(array) {
+    var tem = "";
     for (var i = 0; i < max; i++) {
       var min = i;
       for (var tell = i + 1; tell < max; tell++) {
@@ -95,7 +95,8 @@ class methods {
         array[min] = tem;
       }
     }
-    console.log(array);
+
+    //console.log(array);
   }
   get selection() {
     return this._selaction;
@@ -123,7 +124,7 @@ while (op !== 0) {
     case 3:
       method.bubble = method.array;
       method.bubble;
-      //console.log(method.bubble);
+      console.log(method.bubble);
       break;
     case 4:
       method.bidirectional = method.array;
@@ -140,7 +141,10 @@ while (op !== 0) {
       method.Selection;
       break;
     case 8:
-      //Print(orderSeque, orderBub, orderBidi, orderInser, orderSele);
+      method.print = method.array;
+      method.print;
+      console.log("the array arrangement is: ");
+      console.log(method.array);
       break;
     case 0 :
       op = 0;

@@ -4,7 +4,7 @@ function menu() {
 }
 
 function add() {
-  var array = JSON.parse(localStorage.getItem('array'));
+  var array = JSON.parse(localStorage.getItem('array29'));
   do {
     var tell = 0;
     var name = prompt("Enter the name of product?");
@@ -17,13 +17,13 @@ function add() {
     };
     if (array === null) {
       array = [products];
-      localStorage.setItem('array', JSON.stringify(array));
+      localStorage.setItem('array29', JSON.stringify(array));
     } else {
       array.push(products);
-      localStorage.setItem('array', JSON.stringify(array));
+      localStorage.setItem('array29', JSON.stringify(array));
 
     }
-    let tmp = confirm('');
+    let tmp = confirm("want to add another product?");
     if (tmp) {
       var tell = 0;
     } else {
@@ -34,7 +34,7 @@ function add() {
 }
 
 function searchname(array) {
-  array = JSON.parse(localStorage.getItem("array"));
+  array = JSON.parse(localStorage.getItem("array29"));
   var search = prompt("Enter the name of the product you want to search");
   for (var i = 0; i < array.length; i++) {
     if (search === array[i].name) {
@@ -44,14 +44,14 @@ function searchname(array) {
       }
       console.log("The product was found" + info);
 
-    } else if (search !== (array.length)) {
+    } else if (search !== array[i].name) {
       console.log("The product was not found");
     }
   }
 }
 
 function searchcode(array) {
-  array = JSON.parse(localStorage.getItem("array"));
+  array = JSON.parse(localStorage.getItem("array29"));
   var searchc = prompt("Enter the code of the product you want to search");
   for (var i = 0; i < array.length; i++) {
     if (searchc === array[i].code) {
@@ -60,7 +60,7 @@ function searchcode(array) {
         info += array[i][p] + " ";
       }
       console.log("The product was found" + info);
-    } else if (i === (array.length)) {
+    } else if (i !== array[i].code) {
       console.log("The product was not found");
     }
   }

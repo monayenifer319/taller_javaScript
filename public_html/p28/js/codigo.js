@@ -73,6 +73,7 @@ function insertion(array) {
 }
 
 function selection(array) {
+  var tem = "";
   for (var i = 0; i < max; i++) {
     var min = i;
     for (var tell = i + 1; tell < max; tell++) {
