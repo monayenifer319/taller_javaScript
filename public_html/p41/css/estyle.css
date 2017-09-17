@@ -1,8 +1,9 @@
 a{
-    font-size: 25px;
-    text-decoration: none;
-    color: white;
+  font-size: 25px;
+  text-decoration: none;
+  color: white;
 }
-body{
-    background: pink;
+#message{
+  padding: 20px;
+  margin:  50px 50px;
 }
