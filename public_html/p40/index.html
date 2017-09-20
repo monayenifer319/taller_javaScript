@@ -8,28 +8,41 @@
     <link href="css/estyle.css" rel="stylesheet" type="text/css"/>
   </head>
   <body>
-    <div class="text-center">
-      <form>
-        <input type="text" id="name" placeholder="Enter name"><br><br>
-        <input type="text" id="type" placeholder="Enter document type"><br><br>
-        <input type="text" id="id" placeholder="Number of document"><br><br>
-        <input type="text" id="height" placeholder="Enter your height"><br><br>
-        <select>
-          <option>gender</option>
-          <option value="masculino" id="masculino">Male</option>
-          <option value="femenino" id="femenino">Female</option>
-        </select><br><br>
-        <button onclick="data()" type="button">Enviar</button><br><br>
-      </form>
-      <p id="Name"></p>
-      <p id="Type"></p>
-      <p id="Id"></p>
-      <p id="Height"></p>
-      <p id="Gender"></p>
-      <a href="../index.html"<button type="button" class="btn btn-primary"></button>start</button></a>
+    <div class="container text-center" >
+      <div class="row">
+        <div class="col-sm-6 col-sm-offset-3 jumbotron" id="containe">
+          <form class="">
+            <input type="text" class="form-control" id="name" placeholder="Enter name"><br><br>
+            <input type="text" class="form-control" id="type" placeholder="Enter document type"><br><br>
+            <input type="text" class="form-control" id="id" placeholder="Number of document"><br><br>
+            <input type="text" class="form-control" id="height" placeholder="Enter your height"><br><br>
+            <select class="form-control text-center" id="gender">
+              <option>gender</option>
+              <option value="male">Male</option>
+              <option value="female">Female</option>
+            </select><br><br>
+
+            <div class="row">
+              <div class="col-lg-12">
+                <div class="input-group">
+                  <label>es verdad que usted vive en catago?</label>
+                  <input  type="checkbox" id="label">
+                </div>
+              </div>
+              <div class="col-sm-12">
+                <button onclick="data()" type="button" class="btn btn-success">Enviar</button>
+              </div>
+              <div class="col-sm-12" id="button">
+                <a href="../index.html" class="btn btn-primary">start</a>
+              </div>
+          </form>
+
+        </div>
+      </div>
     </div>
-    <script src="../node_modules/jquery/dist/jquery.min.js" type="text/javascript"></script>
-    <script src="../node_modules/bootstrap/js/modal.js" type="text/javascript"></script>
-    <script src="js/codigo.js"></script>
-  </body>
+  </div>
+  <script src="../node_modules/jquery/dist/jquery.min.js" type="text/javascript"></script>
+  <script src="../node_modules/bootstrap/js/modal.js" type="text/javascript"></script>
+  <script src="js/codigo.js"></script>
+</body>
 </html>

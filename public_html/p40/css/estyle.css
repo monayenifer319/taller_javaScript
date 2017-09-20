@@ -1,9 +1,9 @@
-a{
-  font-size: 25px;
-  text-decoration: none;
-  color: white;
+#button{
+  margin-top: 10px;
 }
-#message{
-  padding: 20px;
-  margin:  50px 50px;
+#label{
+  margin-left: 10px;
+}
+.jumbotron{
+  margin-top: 5%;
 }

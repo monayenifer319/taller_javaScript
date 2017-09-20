@@ -3,10 +3,8 @@ function data() {
   var TYPE = $("#type").val();
   var ID = $("#id").val();
   var HEIGHT = $("#height").val();
-  var GENDER = $("#height").val();
+  var GENDER = $("#gender").val();
+  var live = document.getElementById('label').checked;
 
-  $("#Name").text("hello mane is " + NAME);
-  $("#Id").text("my number of " + TYPE + " IS " + ID);
-  $("#Height").text("my height is " + HEIGHT);
-  $("#Gender").text("my gender is " + GENDER);
+  $("#containe").text("hello mane is " + NAME + " my number of " + TYPE + " IS " + ID + " my height is " + HEIGHT + " my gender is " + GENDER + "es verdad que usted vive en catago? " + live);
 }

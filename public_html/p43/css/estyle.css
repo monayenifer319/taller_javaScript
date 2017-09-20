@@ -1,8 +1,11 @@
 a{
-    font-size: 25px;
-    text-decoration: none;
-    color: white;
+  font-size: 25px;
+  text-decoration: none;
+  color: white;
 }
-body{
-    background: pink;
+#form{
+  margin: 30px;
+}
+.jumbotron{
+  margin-top: 50px;
 }
