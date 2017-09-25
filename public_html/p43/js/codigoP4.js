@@ -8,7 +8,16 @@ function yeni() {
   var mod = n1 % n2;
   var add = n1 + n2;
   var sustra = n1 - n2;
-  $("#answer").html("power the: <br> " + n1 + " ^ " + n2 + " = " + elev + "<br>power the: <br> " + n2 + " ^ " + n1 + " = " + Elev + "<br> multiplication the: <br> " + n1 + " * " + n2 + " = " + multip);
+  $("#boton").click(function () {
+    $("#res1").html("la suma es " + elev);
+    $("#subir").animate({
+      'margin-left': '60vw'
+    });
+    $("#form").animate({
+      'margin-rigth': '170vw'
+    });
+  });
+//  $("#answer").html("power the: <br> " + n1 + " ^ " + n2 + " = " + elev + "<br>power the: <br> " + n2 + " ^ " + n1 + " = " + Elev + "<br> multiplication the: <br> " + n1 + " * " + n2 + " = " + multip);
 
 
 
