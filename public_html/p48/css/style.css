@@ -1,0 +1,18 @@
+body{
+  overflow-x: hidden;
+}
+.jumbotron{
+  margin-top: 50px;
+  width: 100%;
+}
+.btn-success, .btn-danger, #bond {
+  margin-top: 20px;
+}
+#money{
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+#move{
+  margin-top: -50%;
+  margin-left: 90vw;
+}

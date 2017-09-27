@@ -1,0 +1,21 @@
+body{
+  overflow-x: hidden;
+}
+.jumbotron{
+  margin-top: 50px;
+  width: 100%;
+}
+
+#subir{
+  margin-top: -50%;
+  margin-left: 110vw;
+}
+#form{
+  margin: 40px;
+}
+#res1{
+  margin-bottom: 30px;
+}
+#ele, #Multi, #Div, #Ele, #divi {
+  margin-bottom: 20px;
+}
