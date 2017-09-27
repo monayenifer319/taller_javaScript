@@ -1,3 +1,18 @@
+body{
+  overflow-x: hidden;
+}
 .jumbotron{
   margin-top: 50px;
+  width: 100%;
+}
+.btn-success, .btn-danger, #bond, #statement, #numb, #vaHuor, #vaGasoli, #minus, #profit, .btn-primary {
+  margin-top: 30px;
+}
+#money{
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+#move, #Move{
+  margin-top: -90%;
+  margin-left: 90vw;
 }
