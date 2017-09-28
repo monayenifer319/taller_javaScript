@@ -5,14 +5,14 @@ body{
   margin-top: 50px;
   width: 100%;
 }
-.btn-success, .btn-danger, #bond, #statement, #numb, #vaHuor, #vaGasoli, #minus, #profit, .btn-primary {
+.btn-success, .btn-danger, #bond, #statement, #numb, #vaHuor, #vaGasoli, #minus, #profit, .btn-primary, #answ {
   margin-top: 30px;
 }
 #money{
   margin-bottom: 20px;
   margin-top: 20px;
 }
-#move, #Move{
+#move, #Move, #MOve{
   margin-top: -90%;
   margin-left: 90vw;
 }

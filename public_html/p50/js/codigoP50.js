@@ -40,5 +40,7 @@ $(() => {
     $("#hide").animate({
       "margin-left": "90vw"
     }, 2000);
+    $("#multiP3").val(mile + " * " + inch + " * " + cent);
+    $("#answ").val(answer);
   });
 });
