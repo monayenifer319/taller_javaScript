@@ -4,6 +4,6 @@
 #Form{
   margin: 30px;
 }
-#rate, #salary, #buttonR, btn-succes{
-  margin-bottom: 20px;
+#margin, .btn-success, .btn-danger, #answer{
+  margin-top: 20px;
 }

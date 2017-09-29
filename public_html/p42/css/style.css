@@ -1,5 +1,6 @@
 .jumbotron {
   margin-top: 90px;
+  width: 100%;
 }
 #ele, #Multi, #Div, #Ele, #divi, #Sum, #Subtra, #Mod{
   margin-bottom: 20px;
