@@ -1,11 +1,10 @@
 $(() => {
-  var voidi = " ";
+  var voidi = "";
   var aste = "*";
   var i = 0;
   do {
     voidi = voidi + aste;
-    $("#ate").val(voidi + "olaaa");
+    $("#ate").append(voidi + '<br>');
     i++;
   } while (i < 7);
-  $("#ate").val("olaaa");
 });

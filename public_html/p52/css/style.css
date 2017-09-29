@@ -1,3 +1,20 @@
-.jumbotron{
-  margin-top: 50px;
+body{
+  overflow-x: hidden;
+}
+.jumbotron, #img{
+  margin-top: 60px;
+  width: 100%;
+}
+#Form{
+  margin-left: 20px;
+}
+.btn-success, .btn-danger{
+  margin-left: 20px;
+  margin-top: 20px;
+}
+#move{
+  margin-top: -20%;
+}
+#are{
+  margin-bottom: 20px;
 }
