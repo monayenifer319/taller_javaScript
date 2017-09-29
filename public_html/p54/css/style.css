@@ -1,0 +1,9 @@
+.jumbotron{
+  margin-top: 50px;
+}
+#Form{
+  margin: 30px;
+}
+#rate, #salary, #buttonR, btn-succes{
+  margin-bottom: 20px;
+}
