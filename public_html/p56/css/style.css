@@ -1,6 +1,9 @@
 .jumbotron{
   margin-top: 50px;
 }
-.btn-success{
-  margin-top: 90px;
+#form{
+  margin: 30px;
+}
+#Salary, #smlv, #jobDay{
+  margin-bottom: 20px;
 }
