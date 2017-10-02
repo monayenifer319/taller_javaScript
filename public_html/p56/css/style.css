@@ -1,9 +1,33 @@
+body{
+  overflow-x: hidden;
+}
 .jumbotron{
   margin-top: 50px;
+  width: 100%;
 }
-#form{
+#form, #Form, #pay{
   margin: 30px;
 }
 #Salary, #smlv, #jobDay{
   margin-bottom: 20px;
 }
+#transp,#ratention, #PAY{
+  margin-top: -30vw;
+  margin-left: 100vw;
+}
+.h3{
+  margin: 20px;
+}
+#PAY{
+  text-align: center;
+}
+#formPay{
+  margin: 30px;
+}
+.p{
+  font-size: 5px;
+}
+/*.btn-danger, .btn-primary{
+  margin: 30px;
+
+}*/
