@@ -1,6 +1,6 @@
 .jumbotron{
-  margin-top: 50px;
+  margin: 40px;
 }
-.btn-success{
-  margin-top: 90px;
+#h3, #month, #day, #hour, #min{
+  margin-bottom: 20px;
 }
